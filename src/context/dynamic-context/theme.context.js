@@ -1,0 +1,23 @@
+import React from 'react'
+
+export const themes = {
+    light: {
+        foreground: '#000000',
+        background: '#eeeeee',
+    },
+    dark: {
+        foreground: '#ffffff',
+        background: '#222222',
+    },
+}
+
+export const DynamicContext = React.createContext(
+    themes.dark, // 默认值
+)
+
+export const DynamicContextObj = React.createContext(
+    {
+        theme: themes.dark, // 默认值
+        toggleTheme: () => { } // 传递一个函数
+    }
+)
