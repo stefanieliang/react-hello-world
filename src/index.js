@@ -14,6 +14,9 @@ import {
 import ComponentsContainer from './pureComponent/index'
 import MemoComponent from './memo/index'
 
+import ReduxIndex from './redux/index'
+import ReactReduxIndex from './react-redux/index'
+
 function App() {
   return (
     <div>
