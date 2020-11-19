@@ -7,7 +7,7 @@ class ReduxApp extends React.Component {
         return (
             <div>
                 <hr />
-                <h3>Redux</h3>
+                <h3>组件通信：Redux</h3>
                 <p>{store.getState()}</p>
                 <div>
                     {/* dispatch 把数据传递给 reducer */}

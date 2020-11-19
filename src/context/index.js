@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 /**
  * 默认 Context.Provider
  */
+// const { Provider, Consumer } = React.createContext()
 const ThemeContext = React.createContext('light')
 
 /**
@@ -42,12 +43,12 @@ class ContextC extends Component {
     render() {
         return (
             <div>
-                <h3>context</h3>
+                <h3>组件通信：context</h3>
                 {/* 消费一：this.context */}
                 <button> 按钮 {this.context}</button >
                 {/* 消费二：ThemeContext.Consumer  */}
                 <ThemeContext.Consumer>
-                    {/* 注意此处是回调函数 */}
+                    {/* 注意此处是函数 */}
                     {value => value}
                 </ThemeContext.Consumer>
             </div>

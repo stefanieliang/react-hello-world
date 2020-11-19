@@ -1,18 +1,15 @@
-import {
-    Component
-} from 'react'
+import React from 'react'
 
-class WrappedComponent extends Component {
+class WrappedComponent extends React.Component {
     state = {
-        foo: "foo",
-        bar: "bar",
+        list: ['foo', 'bar']
     }
 
     render() {
         return (
             <div>
                 <ul>
-                    {this.state.map(v => <li key={v}>{v}</li>)}
+                    {this.state.list.map(v => <li key={v}>{v}</li>)}
                 </ul>
             </div>
         )

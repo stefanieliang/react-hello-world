@@ -8,22 +8,22 @@ import { connect } from 'react-redux'
 
 @connect(
     state => ({ num: state }),
-    dispatch => ({
-        add: () => dispatch({ type: "add" }),
-        minus: () => dispatch({ type: "minus" })
-    })
+    // dispatch => ({
+    //     add: () => dispatch({ type: "add" }),
+    //     minus: () => dispatch({ type: "minus" })
+    // })
     // 同步的 dispatch 是可以简写的 返回一个 object
-    // {
-    //     add: () => ({ type: "add" }),
-    //     minus: () => ({ type: "minus" })
-    // }
+    {
+        add: () => ({ type: "add" }),
+        minus: () => ({ type: "minus" })
+    }
 )
 class ReactReduxApp extends React.Component {
     render() {
         return (
             <div>
                 <hr />
-                <h3>react-Redux</h3>
+                <h3>组件通信：react-Redux</h3>
                 <p>{this.props.num}</p>
                 <div>
                     {/* dispatch 把数据传递给 reducer */}

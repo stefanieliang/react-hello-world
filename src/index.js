@@ -14,8 +14,15 @@ import {
 import ComponentsContainer from './pureComponent/index'
 import MemoComponent from './memo/index'
 
+// eslint-disable-next-line
 import ReduxIndex from './redux/index'
+// eslint-disable-next-line
 import ReactReduxIndex from './react-redux/index'
+
+import {
+  EnhancedComponent, LogEnhancedComponent, DecoratorsApp
+}
+  from './HOC/enhancedComponent'
 
 function App() {
   return (
@@ -26,10 +33,6 @@ function App() {
       <hr />
       <Rendering />
       <hr />
-      <ContextA />
-      <DynamicContextAttr />
-      <DynamicContextObj />
-      <hr />
       <h3>容器组件 展示组件</h3>
       <CommentList />
       <CommentListContainer />
@@ -39,6 +42,17 @@ function App() {
       <hr />
       <h3>MemoComponent</h3>
       <MemoComponent></MemoComponent>
+      <hr />
+      <h3>HOC</h3>
+      <EnhancedComponent />
+      <LogEnhancedComponent />
+      <DecoratorsApp />
+
+
+      <hr />
+      <ContextA />
+      <DynamicContextAttr />
+      <DynamicContextObj />
     </div >
   )
 }
