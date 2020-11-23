@@ -10,10 +10,9 @@ import logger from 'redux-logger'
 
 import { counterReducer1 } from './counter1.redux'
 import { counterReducer2 } from './counter2.redux'
-import { asyncReducer } from './async.redux'
 
 // 创建一个仓库
-const rootReducer = combineReducers({ counterReducer1, counterReducer2, asyncReducer })
+const rootReducer = combineReducers({ counterReducer1, counterReducer2 })
 const store = createStore(rootReducer, applyMiddleware(thunk, logger))
 
 

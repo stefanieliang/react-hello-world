@@ -16,18 +16,37 @@ const counterReducer1 = (state = 0, action) => {
     }
 }
 
+// return 一个对象
 const addAction = (step) => ({
     type: "add",
     ...step
 });
+
+// 支持这种返回一个函数的写法，就是因为使用了 thunk
+// return 一个函数
+const asyncAddAction = () => {
+    return dispatch => {
+        setTimeout(() => {
+            dispatch({ type: 'add' })
+        }, 1000)
+    }
+};
+
+// const asyncAddAction = () => dispatch => {
+//     setTimeout(() => {
+//         dispatch({ type: 'add' })
+//     }, 1000)
+// };
+
 const minusAction = (step) => ({
     type: "minus",
     ...step
-})
+});
 
 
 export {
     counterReducer1,
     addAction,
+    asyncAddAction,
     minusAction
 }
