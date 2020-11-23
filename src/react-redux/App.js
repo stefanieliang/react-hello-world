@@ -2,16 +2,11 @@ import React from 'react';
 
 import { connect } from 'react-redux'
 
-import {
-    addAction,
-    minusAction
-} from './counter1.redux'
+import { addAction, minusAction } from './counter1.redux'
 
-import {
-    doubleAction
-} from './counter2.redux'
+import { doubleAction } from './counter2.redux'
 
-
+import { asyncAddAction } from './async.redux'
 // import thunk from 'redux-thunk';
 
 // connect 局部组件 提供数据和方法
@@ -56,12 +51,12 @@ class App2 extends React.Component {
 }
 
 
-// @connect(
-//     state => ({ num: state.asyncReducer }),
-//     dispatch => ({
-//         asyncAddAction: () => dispatch()
-//     })
-// )
+@connect(
+    state => ({ num: state.asyncReducer }),
+    dispatch => ({
+        asyncAddAction: () => dispatch({ type: 'asyncAdd' })
+    })
+)
 class ReactReduxApp extends React.Component {
     render() {
         return (
@@ -75,7 +70,8 @@ class ReactReduxApp extends React.Component {
                     <App2></App2>
                     <br></br>
                     <p>异步+1</p>
-                    {/* <button onClick={() => this.props.asyncAddAction()}> 异步+1</button> */}
+                    <p>{this.props.num}</p>
+                    <button onClick={() => this.props.asyncAddAction()}> 异步+1</button>
                 </div>
             </div >
         )
