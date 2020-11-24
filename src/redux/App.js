@@ -6,7 +6,6 @@ class ReduxApp extends React.Component {
     render() {
         return (
             <div>
-                <hr />
                 <h3>组件通信：Redux</h3>
                 <p>{store.getState()}</p>
                 <div>

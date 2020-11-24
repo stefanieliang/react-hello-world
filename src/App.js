@@ -20,8 +20,11 @@ import ReduxIndex from './redux/index'
 import ReactReduxIndex from './react-redux/index'
 
 import { EnhancedComponent, LogEnhancedComponent, DecoratorsApp } from './HOC/enhancedComponent'
-
+// eslint-disable-next-line
 import { Route, Link, Redirect } from 'react-router-dom'
+
+// 手写迷你redux
+import DApp from './d-mini-redux/dApp'
 
 function Index() {
     return (
@@ -96,6 +99,12 @@ function App() {
                         <li><Link to="/dynamicContextObj">DynamicContextObj</Link></li>
                     </ul>
                 </ul>
+                <ul>
+                    <p>手写迷你redux</p>
+                    <ul>
+                        <li><Link to="/dApp">DApp</Link></li>
+                    </ul>
+                </ul>
             </ul>
 
             {/* Route 基本等同于 vue 中的 Router-view */}
@@ -118,6 +127,7 @@ function App() {
             <Route path="/contextA" component={ContextA}></Route>
             <Route path="/dynamicContextAttr" component={DynamicContextAttr}></Route>
             <Route path="/dynamicContextObj" component={DynamicContextObj}></Route>
+            <Route path="/dApp" component={DApp}></Route>
         </div >
     )
 }

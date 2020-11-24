@@ -2,6 +2,7 @@ import React from "react"
 import ReactDOM from 'react-dom'
 
 // 引入路由
+// eslint-disable-next-line
 import { HashRouter, BrowserRouter } from "react-router-dom"
 
 import App from './App'
