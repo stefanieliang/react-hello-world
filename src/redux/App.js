@@ -1,7 +1,7 @@
 import React from 'react';
 
 import store from './store'
-
+import { Button } from 'antd';
 class ReduxApp extends React.Component {
     render() {
         return (
@@ -10,8 +10,8 @@ class ReduxApp extends React.Component {
                 <p>{store.getState()}</p>
                 <div>
                     {/* dispatch 把数据传递给 reducer */}
-                    <button onClick={() => store.dispatch({ type: "add" })}>+</button>
-                    <button onClick={() => store.dispatch({ type: "minus" })}>-</button>
+                    <Button type="primary" onClick={() => store.dispatch({ type: "add" })}>+</Button>
+                    <Button type="dashed" onClick={() => store.dispatch({ type: "minus" })}>-</Button>
                 </div>
             </div>
         )

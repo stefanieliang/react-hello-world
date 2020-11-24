@@ -26,6 +26,9 @@ import { Route, Link, Redirect } from 'react-router-dom'
 // 手写迷你redux
 import DApp from './d-mini-redux/dApp'
 
+// 引入 antd 样式
+import 'antd/dist/antd.css'
+
 function Index() {
     return (
         <div>
