@@ -26,6 +26,10 @@ import { Route, Link, Redirect } from 'react-router-dom'
 // 手写迷你redux
 import DApp from './d-mini-redux/dApp'
 
+// 手写 Form UI,参照antd
+import AIndex from './d-mini-ui/aIndex'
+import DIndex from './d-mini-ui/dIndex'
+
 // 引入 antd 样式
 import 'antd/dist/antd.css'
 
@@ -103,9 +107,16 @@ function App() {
                     </ul>
                 </ul>
                 <ul>
-                    <p>手写迷你redux</p>
+                    <p>手写迷你redux（未完成）</p>
                     <ul>
                         <li><Link to="/dApp">DApp</Link></li>
+                    </ul>
+                </ul>
+                <ul>
+                    <p>手写 Form UI,参照antd(未完成，antd现在升级到4版本了)</p>
+                    <ul>
+                        <li><Link to="/aIndex">AIndex (antd)</Link></li>
+                        <li><Link to="/dIndex">DIndex (dForm)</Link></li>
                     </ul>
                 </ul>
             </ul>
@@ -131,6 +142,8 @@ function App() {
             <Route path="/dynamicContextAttr" component={DynamicContextAttr}></Route>
             <Route path="/dynamicContextObj" component={DynamicContextObj}></Route>
             <Route path="/dApp" component={DApp}></Route>
+            <Route path="/aIndex" component={AIndex}></Route>
+            <Route path="/dIndex" component={DIndex}></Route>
         </div >
     )
 }
